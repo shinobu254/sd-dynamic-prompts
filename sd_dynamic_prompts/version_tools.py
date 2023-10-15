@@ -114,11 +114,11 @@ def install_requirements(force=False) -> None:
     Invoke pip to install the requirements for the extension.
     """
     try:
-        from launch import args
+        from neko import args
 
         if getattr(args, "skip_install", False):
             logger.info(
-                "startfk launch.args.skip_install is true, skipping dynamicprompts installation",
+                "startfk neko.args.skip_install is true, skipping dynamicprompts installation",
             )
             return
     except ImportError:
